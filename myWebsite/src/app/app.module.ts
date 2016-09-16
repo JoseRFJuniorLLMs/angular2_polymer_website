@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { PolymerElement } from '@vaadin/angular2-polymer';
 
 import { AppComponent } from './app.component';
 import { CvComponent } from './cv/cv.component';
@@ -9,7 +10,12 @@ import { CvComponent } from './cv/cv.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CvComponent
+    CvComponent,
+    PolymerElement('paper-tabs'),
+    PolymerElement('paper-tab'),
+    PolymerElement('paper-header-panel'),
+    PolymerElement('paper-toolbar'),
+    PolymerElement('paper-card')
   ],
   imports: [
     BrowserModule,
@@ -17,6 +23,7 @@ import { CvComponent } from './cv/cv.component';
     HttpModule
   ],
   providers: [],
+  schemas:  [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

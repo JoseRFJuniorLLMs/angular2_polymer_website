@@ -1,10 +1,53 @@
 
 
 
-<h1>
-  {{title}}
-</h1>
+  <paper-header-panel mode="waterfall-tall">
+  <paper-toolbar > 
+    <div class="title">CHAPELLE Quentin</div>
+  </paper-toolbar>
+    <paper-toolbar>
+  <paper-tabs selected="0" class="bottom self-end">
+    <paper-tab>Curriculum vitae</paper-tab> 
+    <paper-tab>Expériences professionnelles</paper-tab>
+<paper-tab>Liens
+</paper-tab>
 
+  </paper-tabs>
+
+  </paper-toolbar>
+  <div style="width:100%;">
+
+    <paper-card heading="Card Title" style="margin:10%; margin-top:5%; margin-bottom:5%; width: 80%;">
+  <div class="card-content">
+    
+    <paper-tabs selected="0" class="bottom self-end">
+    <paper-tab>Curriculum vitae</paper-tab> 
+    <paper-tab>Expériences professionnelles</paper-tab>
+<paper-tab>Liens
+</paper-tab>
+
+  </paper-tabs>
+
+    Some content</div>
+  <div class="card-actions">
+    <paper-button>Some action</paper-button>
+  </div>
+</paper-card>
+  </div>
+  <div>
+
+
+
+<paper-card style="margin:10%; margin-top:5%; margin-bottom:5%; width: 80%;" [heading]="title" image="http://placehold.it/350x150/FFC107/000000" [alt]="title">
+  <div class="card-content">
+
+<paper-tabs selected="0" class="bottom self-end">
+    <paper-tab>Curriculum vitae</paper-tab> 
+    <paper-tab>Expériences professionnelles</paper-tab>
+<paper-tab>Liens
+</paper-tab>
+
+  </paper-tabs>
 
 <app-cv></app-cv>
 <app-cv></app-cv>
@@ -23,3 +66,20 @@
 <app-cv></app-cv>
 <app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv><app-cv></app-cv>
 <app-cv></app-cv><app-cv></app-cv><app-cv></app-cv>
+
+</div>
+  <div class="card-actions">
+    <button>Share</button>
+    <button>Explore!</button>
+  </div>
+</paper-card>
+
+
+<footer>
+This website use<br>
+<div class="imgDiv">
+<img src="https://www.polymer-project.org/images/logos/p-logo.png"><img src="https://angular.io/resources/images/logos/angular2/angular.svg">
+</div>
+</footer>
+  </div>
+</paper-header-panel>
