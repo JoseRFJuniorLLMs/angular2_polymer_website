@@ -1,0 +1,25 @@
+{
+  "name": "my-website",
+  "description": "",
+  "main": "",
+  "authors": [
+    "CHAPELLE Quentin <chapelle.quentin@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/quentinchap/angular2_polymer_website",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-elements": "^1.0.7",
+    "vaadin-combo-box": "^1.1.4",
+    "paper-toolbar": "^1.1.6",
+    "paper-header-panel": "PolymerElements/paper-header-panel#^1.1.6",
+    "paper-tabs": "PolymerElements/paper-tabs#^1.6.2"
+  }
+}

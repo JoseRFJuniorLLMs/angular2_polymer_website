@@ -5,11 +5,38 @@
   <title>MyWebsite</title>
   <base href="/">
 
+  <script src = "bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+  <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   
 </head>
 <body>
-  <app-root>Loading...</app-root>
+
+  <paper-header-panel mode="waterfall-tall" class="flex">
+  <paper-toolbar > 
+    <div class="title">CHAPELLE Quentin</div>
+  </paper-toolbar>
+    <paper-toolbar>
+  <paper-tabs selected="0" class="bottom self-end" style="width: 300px;">
+    <paper-tab>ITEM ONE</paper-tab>
+    <paper-tab>ITEM TWO</paper-tab>
+  </paper-tabs>
+
+  </paper-toolbar>
+
+<app-root>Loading...</app-root>
+
+  </div>
+</paper-header-panel>
+
+
+
+
+
+
 </body>
 </html>

@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, 
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.paper-toolbar-0.tall .toolbar-tools.paper-toolbar .title
+{
+    font-size: 3em;
+    font-weight: lighter;
+    margin-top: 15%;
+    margin-left: 0;
+
+}
+
+.paper-toolbar-0 .toolbar-tools.paper-toolbar .title
+{
+
+      -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
