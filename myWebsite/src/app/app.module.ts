@@ -6,6 +6,8 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
 
 import { AppComponent } from './app.component';
 import { CvComponent } from './cv/cv.component';
+import { MenuComponent } from './menu/menu.component';
+import { TechnoComponent } from './techno/techno.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CvComponent } from './cv/cv.component';
     PolymerElement('paper-tab'),
     PolymerElement('paper-header-panel'),
     PolymerElement('paper-toolbar'),
-    PolymerElement('paper-card')
+    PolymerElement('paper-card'),
+    MenuComponent,
+    TechnoComponent
   ],
   imports: [
     BrowserModule,
