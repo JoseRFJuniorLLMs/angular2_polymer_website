@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  leftMenu: boolean;
+
+  constructor() { this.leftMenu = false; }
+
   title = 'app works! 3';
+
+  toggleLeft() {
+    this.leftMenu = !this.leftMenu;
+  }
 }

@@ -17,7 +17,9 @@ import { TechnoComponent } from './techno/techno.component';
     PolymerElement('paper-tab'),
     PolymerElement('paper-header-panel'),
     PolymerElement('paper-toolbar'),
+    PolymerElement('app-drawer'),
     PolymerElement('paper-card'),
+    PolymerElement('paper-icon-button'),
     MenuComponent,
     TechnoComponent
   ],

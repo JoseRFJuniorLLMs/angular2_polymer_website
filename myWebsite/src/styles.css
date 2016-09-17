@@ -6,3 +6,10 @@ body {
     margin: 0;
     background: #eeeeee;
 }
+
+
+
+.paper-progress-0 #primaryProgress.paper-progress {
+   background-color: #3f51b5;
+}
+
