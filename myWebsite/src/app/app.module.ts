@@ -3,11 +3,16 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PolymerElement } from '@vaadin/angular2-polymer';
+import { RouterModule } from '@angular/router'; 
+import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { CvComponent } from './cv/cv.component';
 import { MenuComponent } from './menu/menu.component';
 import { TechnoComponent } from './techno/techno.component';
+import { HomeComponent } from './home/home.component';
+import { LabComponent } from './lab/lab.component';
+import { LinkComponent } from './link/link.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +26,16 @@ import { TechnoComponent } from './techno/techno.component';
     PolymerElement('paper-card'),
     PolymerElement('paper-icon-button'),
     MenuComponent,
-    TechnoComponent
+    TechnoComponent,
+    HomeComponent,
+    LabComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   schemas:  [ CUSTOM_ELEMENTS_SCHEMA ],

@@ -54,7 +54,22 @@
     transition: all 0.3s ease;
 }
 
+.tall .profilPicture img{
+    opacity: 1;
+}
 
+.profilPicture img{
+    opacity: 0;
+    width: 110px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
 footer{
     font-family: 'Roboto', 'Noto', sans-serif;
