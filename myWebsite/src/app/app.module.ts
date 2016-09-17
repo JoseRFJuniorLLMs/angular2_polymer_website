@@ -24,6 +24,7 @@ import { LinkComponent } from './link/link.component';
     PolymerElement('paper-toolbar'),
     PolymerElement('app-drawer'),
     PolymerElement('paper-card'),
+    PolymerElement('paper-item'),
     PolymerElement('paper-icon-button'),
     MenuComponent,
     TechnoComponent,
