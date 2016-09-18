@@ -2,12 +2,8 @@
     <h1 class='title'>CHAPELLE Quentin - Curriculum vitae</h1>
 
 
-<base-chart class="chart"
-             [datasets]="radarChartData"
-             [labels]="radarChartLabels"
-             [chartType]="radarChartType"
-             (chartHover)="chartHovered($event)"
-             (chartClick)="chartClicked($event)"></base-chart>
+    <base-chart class="chart" [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)"></base-chart>
 
     <paper-card heading="Atouts" style="width:100%;margin-top:5%">
     </paper-card>
@@ -21,7 +17,7 @@
 
         <paper-card heading="Analyste développeur fullstack" style="width:100%;margin-top:5%;" image="assets/svg/michelin.svg">
             <div class="card-content" style="padding-top: 0;">
-                <h4 style="-webkit-margin-before:0;font-weight: 400;margin-left:15px;">Du 03/2016 à maintenant. Clermont-Ferrand</h4>
+                <h4 style="-webkit-margin-before:0;font-weight: 400;margin-left:15px;">De mars 2016 à maintenant. Clermont-Ferrand</h4>
                 <h3>Description</h3>
                 <p>Analyse de besoins, conception et développment de solutions web et/ou mobile innovantes et attrayantes.</p>
                 <h3>Principaux challenges</h3>
@@ -37,21 +33,38 @@
                 <iron-icon src="assets/svg/ionic.svg" style="width:64px;" item-icon></iron-icon>
                 <iron-icon src="assets/svg/cordova.png" style="width:64px;" item-icon></iron-icon>
                 grunt yeoman npm
-                
+
             </div>
         </paper-card>
 
         <paper-card heading="Analyste fonctionnel" style="width:100%;margin-top:5%" image="assets/svg/michelin.svg">
+            <h4 style="-webkit-margin-before:0;font-weight: 400;margin-left:15px;">De septembre 2014 à mars 2016. Clermont-Ferrand</h4>
         </paper-card>
 
         <paper-card heading="Alternant" style="width:100%;margin-top:5%" image="assets/svg/michelin.svg">
+            <h4 style="-webkit-margin-before:0;font-weight: 400;margin-left:15px;">De septembre 2013 à septembre 2014. Clermont-Ferrand</h4>
         </paper-card>
 
         <paper-card heading="Développeur stagiaire" style="width:100%;margin-top:5%" image="assets/svg/worldline.jpg">
+            <h4 style="-webkit-margin-before:0;font-weight: 400;margin-left:15px;">De avril 2013 à septembre 2013. Lyon</h4>
         </paper-card>
 
         <paper-card heading="Développeur stagiaire" style="width:100%;margin-top:5%" image="assets/svg/chu.jpg">
+            <h4 style="-webkit-margin-before:0;font-weight: 400;margin-left:15px;">De avril 2010 à juin 2010. Clermont-Ferrand</h4>
         </paper-card>
+
+        <paper-card heading="Diver" style="width:100%;margin-top:5%">
+            <div class="card-content">
+            Emplois saisonniers:
+            <ul>
+                <li>Ambulancier à Tissier - Nevers 58000 : Août 2011 et Juillet - Août 2012</li>
+                <li>Service Comptabilité à Logivie - Nevers 58000 : Août 2010</li>
+                <li>Chargé d'accueil à la Caisse d'épargne - Coulanges-lés-Nevers 58660 : Juillet 2009</li>
+                <li>Service informatique à Logivie - Nevers 58000 : Août 2008 et Août 2009</li>
+            </ul>
+            </div>
+        </paper-card>
+
     </div>
     <div style="margin-top:5%">
 
