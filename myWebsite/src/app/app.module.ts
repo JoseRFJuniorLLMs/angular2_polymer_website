@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 import { RouterModule } from '@angular/router'; 
 import { ROUTES } from './app.routes';
+import {ChartsModule} from 'ng2-charts/ng2-charts';
 
 import { AppComponent } from './app.component';
 import { CvComponent } from './cv/cv.component';
@@ -13,6 +14,7 @@ import { TechnoComponent } from './techno/techno.component';
 import { HomeComponent } from './home/home.component';
 import { LabComponent } from './lab/lab.component';
 import { LinkComponent } from './link/link.component';
+import { LogstashComponent } from './logstash/logstash.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import { LinkComponent } from './link/link.component';
     PolymerElement('app-drawer'),
     PolymerElement('paper-card'),
     PolymerElement('paper-item'),
+    PolymerElement('iron-icon'),
     PolymerElement('paper-icon-button'),
+    PolymerElement('google-youtube'),
     MenuComponent,
     TechnoComponent,
     HomeComponent,
     LabComponent,
-    LinkComponent
+    LinkComponent,
+    LogstashComponent
   ],
   imports: [
     BrowserModule,

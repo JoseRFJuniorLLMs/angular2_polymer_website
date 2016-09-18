@@ -1,8 +1,9 @@
-<paper-tabs selected="0" class="bottom self-end">
-
-  <paper-tab routerLink = "/">Acceuil</paper-tab>
-  <paper-tab routerLink = "/cv">Curriculum vitae</paper-tab>
-  <paper-tab routerLink = "/lab">Le lab</paper-tab>
-  <paper-tab routerLink = "/link">Liens</paper-tab>
+<paper-tabs selected="0" class="bottom self-end" style="position: relative;
+    bottom: -8px;">
+  <paper-icon-button icon="menu" (click)="toggleLeft()"></paper-icon-button>
+  <paper-tab routerLink="/">Acceuil</paper-tab>
+  <paper-tab routerLink="/cv">Curriculum vitae</paper-tab>
+  <paper-tab routerLink="/lab">Le lab</paper-tab>
+  <paper-tab routerLink="/link">Liens</paper-tab>
 
 </paper-tabs>

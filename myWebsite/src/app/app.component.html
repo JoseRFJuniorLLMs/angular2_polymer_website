@@ -8,26 +8,18 @@
 
 
   <paper-toolbar>
-
-    <paper-icon-button icon="menu" (click)="toggleLeft()"></paper-icon-button>
-    <app-menu></app-menu>
+    <app-menu [leftmenu]="leftMenu"></app-menu>
 
   </paper-toolbar>
-
-
 
   <div style="width:100%;">
 
     <router-outlet> </router-outlet>
 
-
-    
-
-
     <footer>
       This website use<br>
       <div class="imgDiv">
-        <img src="https://www.polymer-project.org/images/logos/p-logo.png"><img src="https://angular.io/resources/images/logos/angular2/angular.svg">
+        <img src="assets/svg/polymer.svg"><img src="assets/svg/angular2.svg">
       </div>
     </footer>
   </div>

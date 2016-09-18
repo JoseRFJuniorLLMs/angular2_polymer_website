@@ -14,3 +14,21 @@
         :host(.page2Container.ng-enter-active) {
         transform: rotateZ(0deg)
     }
+
+    h1.title
+    {
+        font-family: 'Roboto', 'Noto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h2
+    {
+        font-family: 'Roboto', 'Noto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: lighter;
+    }
+
+    h3
+    {
+        font-weight: lighter;
+    }
