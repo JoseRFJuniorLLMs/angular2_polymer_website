@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvComponent implements OnInit {
 
+/* add latteral bar to scroll quick + add path lien for Qrcode */
+
   constructor() { }
 
   // Radar

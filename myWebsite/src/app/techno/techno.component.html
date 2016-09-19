@@ -2,36 +2,49 @@
 
   <h2>Compétences informatique</h2>
 
-  <paper-card heading="Web">
-    <div class="card-content">
-      <iron-icon src="assets/svg/angular2.svg" item-icon></iron-icon>
-      <iron-icon src="assets/svg/html5.svg" item-icon></iron-icon>
-      <iron-icon src="assets/svg/css3.svg" item-icon></iron-icon>
-      <iron-icon src="assets/svg/js.png" item-icon></iron-icon>
-      <iron-icon src="assets/svg/php.svg" item-icon></iron-icon>
-      <iron-icon src="assets/svg/polymer.svg" item-icon></iron-icon>
-    </div>
-  </paper-card>
+  <div style="display: flex;flex-direction: row;">
 
-  <paper-card heading="Os">
-    <div class="card-content">
-      <iron-icon src="assets/svg/linux.svg" item-icon></iron-icon>
-      <iron-icon src="assets/svg/windows.svg" item-icon></iron-icon>
-      <iron-icon src="assets/svg/apple.svg" item-icon></iron-icon>
-    </div>
-  </paper-card>
+    <paper-card style="flex:1;margin:2.5%;margin-left:0;display: flex;flex-direction: row;">
+      <div style="flex:1;background:#5c6bc0;border:solid 1px #5c6bc0;padding:2%;text-align:center;color:white">
+        Web
+      </div>
+      <div style="flex:3;padding:5%;">
+        <iron-icon  *ngFor="let tech of this.techno.web" [src]="tech" item-icon style="margin:3px;"></iron-icon>
+      </div>
+    </paper-card>
 
-  <paper-card heading="Mobile">
-    <div class="card-content">
+
+    <paper-card style="flex:1;margin:2.5%;margin-right:0;display: flex;flex-direction: row;">
+      <div style="flex:1;background:#FF7043;border:solid 1px #FF7043;padding:2%;text-align:center;color:white">
+        Os
+      </div>
+      <div style="flex:3;padding:5%;">
+        <iron-icon  *ngFor="let tech of this.techno.os" [src]="tech" item-icon></iron-icon>
+      </div>
+    </paper-card>
+  </div>
+
+  <div style="display: flex;flex-direction: row;">
+
+   <paper-card style="flex:1;margin:2.5%;margin-left:0;display: flex;flex-direction: row;">
+      <div style="flex:1;background:#43a047;border:solid 1px #43a047;padding:2%;text-align:center;color:white">
+        Mobile
+      </div>
+      <div style="flex:3;padding:5%;">
       <iron-icon src="assets/svg/android.svg" item-icon></iron-icon>
-      <iron-icon  src="assets/svg/ionic.svg" style="width:64px;" item-icon> </iron-icon>
-      <iron-icon  src="assets/svg/cordova.png" style="width:64px;" item-icon> </iron-icon>
+      <iron-icon src="assets/svg/ionic.svg" style="width:64px;" item-icon> </iron-icon>
+      <iron-icon src="assets/svg/cordova.png" style="width:64px;" item-icon> </iron-icon>
     </div>
   </paper-card>
 
-  <paper-card heading="Autre language">
-    <div class="card-content">
-    </div>
+  <paper-card style="flex:1;margin:2.5%;margin-right:0;display: flex;flex-direction: row;">
+      <div style="flex:1;background:#ffc200;border:solid 1px #ffc200;padding:2%;text-align:center;color:white">
+        Autre
+      </div>
+      <div style="flex:3;padding:5%;">
+      </div>
   </paper-card>
+
+  </div>
 
 </div>
