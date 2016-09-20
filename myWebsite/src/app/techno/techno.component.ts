@@ -7,16 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnoComponent implements OnInit {
 
-  techno = {}
+  techno: any = {}
 
-  constructor() { 
+  constructor() {
     this.techno.web = [
       'assets/svg/angular2.svg',
       'assets/svg/html5.svg',
       'assets/svg/css3.svg',
       'assets/svg/js.png',
       'assets/svg/php.svg',
-      'assets/svg/polymer.svg'
+      'assets/svg/polymer.svg',
+      'assets/svg/grunt.svg',
+      'assets/svg/yeoman.svg',
+      'assets/svg/npm.svg'
     ];
 
     this.techno.os = [

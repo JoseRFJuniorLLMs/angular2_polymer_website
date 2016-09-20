@@ -95,3 +95,47 @@ footer .imgDiv{
     margin: 10px;
     vertical-align: middle;
 }
+
+@media (max-width: 600px) {
+
+.fonction
+{
+  margin-top: 35px;
+}
+.profilPicture{
+    display: none;
+}
+
+.title{
+    margin-left: 0;
+}
+
+  .buttonCollapse {
+    display: initial;
+  }
+
+  .menuHeader
+  {
+      display: none;
+  }
+
+
+}
+
+@media (min-width: 600px) {
+
+.profilPicture{
+    display: initial;
+}
+
+  .buttonCollapse {
+    display: none;
+  }
+
+  .menuHeader
+  {
+      display: initial;
+  }
+}
+
+

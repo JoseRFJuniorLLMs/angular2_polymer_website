@@ -15,76 +15,27 @@
 
         <h2>Expériences profesionnelles</h2>
 
-        <paper-card style="flex:1;margin-top:5%;display: flex;flex-direction: row;">
-            <div style="flex:1;background:#00509c;border:solid 1px #00509c;padding:2%;text-align:left;color:white">
-                <strong>MICHELIN</strong><br>
-                <p>De mars 2016<br>à maintenant</p>
-                <p>Clermont-Ferrand</p>
-            </div>
-            <div style="flex:3;padding:5%;">
-                <h1>Analyste développeur fullstack</h1>
-                <h3>Description</h3>
-                <p>Analyse de besoins, conception et développment de solutions web et/ou mobile innovantes et attrayantes.</p>
-                <h3>Principaux challenges</h3>
-                <ul>
-                    <li>Time to market très court</li>
-                    <li>Multiplication des technologies utilisées</li>
-                    <li>S'adapter aux différents métiers</li>
-                </ul>
-                <h3>Technologies</h3>
-                <iron-icon src="assets/svg/android.svg" item-icon></iron-icon>
-                <iron-icon src="assets/svg/angular.svg" item-icon></iron-icon>
-                <iron-icon src="assets/svg/grails.svg" item-icon></iron-icon>
-                <iron-icon src="assets/svg/ionic.svg" style="width:64px;" item-icon></iron-icon>
-                <iron-icon src="assets/svg/cordova.png" style="width:64px;" item-icon></iron-icon>
-                grunt yeoman npm
-
-            </div>
-        </paper-card>
-
-        <paper-card style="flex:1;margin-top:5%;display: flex;flex-direction: row;">
-            <div style="flex:1;background:#00509c;border:solid 1px #00509c;padding:2%;text-align:left;color:white">
-                <strong>MICHELIN</strong><br>
-                <p>De sept. 2014<br>à mars 2016</p>
-                <p>Clermont-Ferrand</p>
-            </div>
-            <div style="flex:3;padding:5%;">
-                <h1>Analyste fonctionnel</h1>
-            </div>
-        </paper-card>
+        <span *ngFor="let job of expPro"> 
+        <app-experience-pro 
+            [entreprise]="job.entreprise" 
+            [begin]="job.begin" 
+            [end]="job.end" 
+            [jobName]="job.jobName" 
+            [description]="job.description" 
+            [technos]="job.technos" 
+            [challenge]="job.challenge" 
+            [color]="job.color" 
+            [city]="job.city">
+        </app-experience-pro>
+      </span>
 
 
         <paper-card style="flex:1;margin-top:5%;display: flex;flex-direction: row;">
-            <div style="flex:1;background:#00509c;border:solid 1px #00509c;padding:2%;text-align:left;color:white">
-                <strong>MICHELIN</strong><br>
-                <p>De sept. 2013<br>à sept. 2014</p>
-                <p>Clermont-Ferrand</p>
+            <div style="background-color:#5C6BC0;flex:1;padding:2%;text-align:left;color:white">
+                <strong>Divers</strong>
             </div>
             <div style="flex:3;padding:5%;">
-                <h1>Alternant</h1>
-            </div>
-        </paper-card>
-
-
-
-        <paper-card style="flex:1;margin-top:5%;display: flex;flex-direction: row;">
-            <div style="flex:1;background:#04689c;border:solid 1px #04689c;padding:2%;text-align:left;color:white">
-                <strong>WORLDLINE</strong><br>
-                <p>De avr. 2013<br>à sept. 2013</p>
-                <p>Lyon</p>
-            </div>
-            <div style="flex:3;padding:5%;">
-                <h1>Développeur stagiaire</h1>
-            </div>
-        </paper-card>
-
-        <paper-card heading="Développeur stagiaire" style="width:100%;margin-top:5%" image="assets/svg/chu.jpg">
-            <h4 style="-webkit-margin-before:0;font-weight: 400;margin-left:15px;">De avril 2010 à juin 2010. Clermont-Ferrand</h4>
-        </paper-card>
-
-        <paper-card heading="Diver" style="width:100%;margin-top:5%">
-            <div class="card-content">
-                Emplois saisonniers:
+                <h1>Emplois saisonniers</h1>
                 <ul>
                     <li>Ambulancier à Tissier - Nevers 58000 : Août 2011 et Juillet - Août 2012</li>
                     <li>Service Comptabilité à Logivie - Nevers 58000 : Août 2010</li>
@@ -99,10 +50,45 @@
 
         <h2>Formation</h2>
 
+        <span *ngFor="let job of formations"> 
+        <app-experience-pro 
+            [entreprise]="job.entreprise" 
+            [begin]="job.begin" 
+            [end]="job.end" 
+            [jobName]="job.jobName" 
+            [description]="job.description" 
+            [technos]="job.technos" 
+            [challenge]="job.challenge" 
+            [color]="job.color" 
+            [city]="job.city">
+        </app-experience-pro>
+      </span>
+
     </div>
     <div style="margin-top:5%">
 
         <h2>Langues</h2>
+
+        <div style="display: flex;flex-direction: row;">
+
+            <paper-card style="flex:1;margin:2.5%;margin-left:0;display: flex;flex-direction: row;">
+                <div style="flex:1;
+                background: url('assets/france.gif'); background-size: cover;background-position:center center;padding:2%;">
+                </div>
+                <div style="flex:3;padding:5%;">
+                    Français: langue natale
+                </div>
+            </paper-card>
+
+
+            <paper-card style="flex:1;margin:2.5%;margin-right:0;display: flex;flex-direction: row;">
+                <div style="flex:1;background: url('assets/en.gif'); background-size: cover;background-position:center center;padding:2%;">
+                </div>
+                <div style="flex:3;padding:5%;">
+                    Anglais: Pro.
+                </div>
+            </paper-card>
+        </div>
 
     </div>
     <div style="margin-top:5%">

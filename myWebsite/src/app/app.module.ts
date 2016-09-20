@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { LabComponent } from './lab/lab.component';
 import { LinkComponent } from './link/link.component';
 import { LogstashComponent } from './logstash/logstash.component';
+import { ExperienceProComponent } from './cv/experience-pro/experience-pro.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +31,14 @@ import { LogstashComponent } from './logstash/logstash.component';
     PolymerElement('iron-icon'),
     PolymerElement('paper-icon-button'),
     PolymerElement('google-youtube'),
+    PolymerElement('iron-media-query'),
     MenuComponent,
     TechnoComponent,
     HomeComponent,
     LabComponent,
     LinkComponent,
-    LogstashComponent
+    LogstashComponent,
+    ExperienceProComponent
   ],
   imports: [
     BrowserModule,

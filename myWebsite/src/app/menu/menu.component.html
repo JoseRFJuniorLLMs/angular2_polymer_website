@@ -1,9 +1,16 @@
 <paper-tabs selected="0" class="bottom self-end" style="position: relative;
-    bottom: -8px;">
-  <paper-icon-button icon="menu" (click)="toggleLeft()"></paper-icon-button>
+    bottom: -8px;" class="menuHeader">
+
   <paper-tab routerLink="/">Acceuil</paper-tab>
   <paper-tab routerLink="/cv">Curriculum vitae</paper-tab>
   <paper-tab routerLink="/lab">Le lab</paper-tab>
   <paper-tab routerLink="/link">Liens</paper-tab>
 
 </paper-tabs>
+
+<span class="buttonCollapse">
+  <a routerLink="/">Acceuil</a>
+  <a routerLink="/cv">Curriculum vitae</a>
+  <a routerLink="/lab">Le lab</a>
+  <a routerLink="/link">Liens</a>
+</span>

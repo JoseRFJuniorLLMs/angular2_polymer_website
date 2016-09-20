@@ -1,15 +1,14 @@
 <paper-header-panel mode="waterfall-tall">
   <paper-toolbar>
     <div class="title">CHAPELLE Quentin</div>
-    <div class="bottom subhead">Anaylste developpeur fullstack</div>
+    <div class="bottom subhead fonction">Anaylste developpeur fullstack</div>
     <div class="profilPicture"> <img src="http://quentinchapelle.fr/images/photoProfil.jpg"> </div>
   </paper-toolbar>
 
 
-
   <paper-toolbar>
-    <app-menu [leftmenu]="leftMenu"></app-menu>
-
+    <paper-icon-button class="buttonCollapse" icon="menu" (click)="toggleLeft()"></paper-icon-button>
+    <app-menu class="menuHeader" [leftmenu]="leftMenu"></app-menu>
   </paper-toolbar>
 
   <div style="width:100%;">
@@ -24,8 +23,13 @@
     </footer>
   </div>
 
-  <app-drawer id="startDrawer" align="start" [(opened)]="leftMenu">
-    <div style="height: 100%; overflow: auto; width:300px;"></div>
-  </app-drawer>
+ 
 
 </paper-header-panel>
+
+ <app-drawer id="startDrawer" align="start" [(opened)]="leftMenu">
+    <div style="height: 100%; overflow: auto; width:300px;">
+      ggg
+      <app-menu [leftmenu]="leftMenu"></app-menu>
+    </div>
+  </app-drawer>
