@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ChartsModule} from 'ng2-charts/ng2-charts';
+
 
 class Job {
   public entreprise: string;
@@ -29,28 +29,33 @@ class Job {
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.css']
+  
 })
 export class CvComponent implements OnInit {
 
   expPro: any[] = [];
   formations: any[] = [];
 
-  public radarChartLabels:string[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
-
-  public radarChartData:any = [
-    {data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B'}
+  private datasets = [
+    {
+      label: "# of Votes",
+      data: [12, 19, 3, 5, 2, 3]
+    }
   ];
-  public radarChartType:string = 'radar';
 
-  // events
-  public chartClicked(e:any):void {
-    console.log(e);
-  }
+  private labels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
 
-  public chartHovered(e:any):void {
-    console.log(e);
-  }
+  private options = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  };
+
+
 
   constructor() {
 
