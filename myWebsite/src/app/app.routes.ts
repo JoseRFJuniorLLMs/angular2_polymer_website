@@ -12,5 +12,5 @@ export const ROUTES: Routes =
         { path: 'lab', component: LabComponent },
         { path: 'link', component: LinkComponent },
         { path: '', component: HomeComponent },
-        { path: 'logstash', component: LogstashComponent }
+        { path: 'lab/logstash', component: LogstashComponent }
     ];

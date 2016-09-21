@@ -1,8 +1,8 @@
-<paper-menu class="buttonCollapse">
+<paper-menu class="buttonCollapse" [selected]="getSelected()">
   <paper-item *ngFor="let l of links" [routerLink]="l.route" (click)="openClose(false)">{{l.label}}</paper-item>
 </paper-menu>
 
-<paper-tabs selected="0" class="bottom self-end menuHeader" >
+<paper-tabs [selected]="getSelected()" class="bottom self-end menuHeader" >
   <paper-tab *ngFor="let l of links" [routerLink]="l.route">{{l.label}}</paper-tab>
 </paper-tabs>
 

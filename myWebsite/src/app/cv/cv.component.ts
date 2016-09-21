@@ -61,9 +61,6 @@ export class CvComponent implements OnInit {
     this.formations.push(new Job("ISIMA", "De sept. 2011", "à sept. 2014", "Ecole d'ingénieur", "test", [], [], "#43A047", "Clermont-Ferrand"));
 
     this.formations.push(new Job("ISIMA", "De sept. 2011", "à sept. 2014", "Ecole d'ingénieur", "test", [], [], "#43A047", "Clermont-Ferrand"));
-
-
-    console.log(this.expPro);
   }
 
   ngOnInit() {
