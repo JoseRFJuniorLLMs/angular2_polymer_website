@@ -1,20 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter,Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
-  inputs: ['leftmenu'],
-  outputs: ['onAdd']
 })
 export class MenuComponent implements OnInit {
 
-  leftMenu: boolean;
-  constructor() { 
+  links: any[] = [];
+  
+  @Output() closeMenu = new EventEmitter<boolean>();
+
+  openClose(val: boolean) {
+    this.closeMenu.emit(val);
   }
 
-  toggleLeft() {
-    this.leftMenu = !this.leftMenu;
+  constructor() {
+    this.links.push(
+      { route: '/', label: 'Acceuil' },
+      { route: '/cv', label: 'Curriculum vitae' },
+      { route: '/lab', label: 'Le lab' },
+      { route: '/link', label: 'Liens' }
+    )
   }
 
   ngOnInit() {

@@ -28,6 +28,7 @@ import { ExperienceProComponent } from './cv/experience-pro/experience-pro.compo
     PolymerElement('app-drawer'),
     PolymerElement('paper-card'),
     PolymerElement('paper-item'),
+    PolymerElement('paper-menu'),
     PolymerElement('iron-icon'),
     PolymerElement('paper-icon-button'),
     PolymerElement('google-youtube'),

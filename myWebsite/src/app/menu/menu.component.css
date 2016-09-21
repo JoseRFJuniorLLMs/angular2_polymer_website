@@ -1,0 +1,33 @@
+
+.menuHeader{
+    position: relative;
+    bottom: -8px;
+}
+
+
+@media (max-width: 600px) {
+
+
+  .buttonCollapse {
+    display: initial;
+  }
+
+  .menuHeader
+  {
+      display: none;
+  }
+
+
+}
+
+@media (min-width: 600px) {
+
+  .buttonCollapse {
+    display: none;
+  }
+
+  .menuHeader
+  {
+      display: block;
+  }
+}

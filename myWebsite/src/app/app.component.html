@@ -8,7 +8,7 @@
 
   <paper-toolbar>
     <paper-icon-button class="buttonCollapse" icon="menu" (click)="toggleLeft()"></paper-icon-button>
-    <app-menu class="menuHeader" [leftmenu]="leftMenu"></app-menu>
+    <app-menu class="menuHeader" (closeMenu)="toggleLeft()"></app-menu>
   </paper-toolbar>
 
   <div style="width:100%;">
@@ -23,13 +23,12 @@
     </footer>
   </div>
 
- 
+
 
 </paper-header-panel>
 
- <app-drawer id="startDrawer" align="start" [(opened)]="leftMenu">
-    <div style="height: 100%; overflow: auto; width:300px;">
-      ggg
-      <app-menu [leftmenu]="leftMenu"></app-menu>
-    </div>
-  </app-drawer>
+<app-drawer id="startDrawer" align="start" [(opened)]="leftMenu">
+  <div style="height: 100%; overflow: auto; width:256px;">
+    <app-menu (closeMenu)="toggleLeft()"></app-menu>
+  </div>
+</app-drawer>
