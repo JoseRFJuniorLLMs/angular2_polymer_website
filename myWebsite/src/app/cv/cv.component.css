@@ -1,34 +1,62 @@
+
+:host(.page2Container) {
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+}
+
+:host(.page2Container.ng-enter) {
+    transform: rotateZ(180deg)
+}
+
+    :host(.page2Container.ng-enter-active) {
+    transform: rotateZ(0deg)
+}
+
+h1.title
+{
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h2
+{
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: lighter;
+}
+
+h3
+{
+    font-weight: lighter;
+}
+
+.langues{
+    display: flex;
+}
+
+.langue{
+    flex:1;
+    margin:2.5%;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {
+    .langues{
+        flex-direction: column;
+    }
     
-    :host(.page2Container) {
-        position: fixed;
-        display: inline-block;
-        width: 100%;
-        -webkit-transition: all ease-in-out 0.5s;
-        transition: all ease-in-out 0.5s;
+    .langue{
+        margin-left: 0;
+        margin-right: 0;
     }
-    
-    :host(.page2Container.ng-enter) {
-        transform: rotateZ(180deg)
-    }
+}
 
-        :host(.page2Container.ng-enter-active) {
-        transform: rotateZ(0deg)
+@media (min-width: 600px) {
+    .langues{
+        flex-direction: row;
     }
-
-    h1.title
-    {
-        font-family: 'Roboto', 'Noto', sans-serif;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    h2
-    {
-        font-family: 'Roboto', 'Noto', sans-serif;
-        -webkit-font-smoothing: antialiased;
-        font-weight: lighter;
-    }
-
-    h3
-    {
-        font-weight: lighter;
-    }
+}

@@ -6,8 +6,10 @@
   </div>
   <div style="flex:3;padding:5%;">
     <h1>{{jobName}}</h1>
+    <span *ngIf="description">
     <h3>Description</h3>
     {{description}}
+    </span>
     <span *ngIf="challenge && challenge.length > 0">
     <h3>Principaux challenges</h3>
     <ul>

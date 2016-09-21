@@ -2,48 +2,47 @@
 
   <h2>Compétences informatique</h2>
 
-  <div style="display: flex;flex-direction: row;">
+  <div class="duetTechno">
 
-    <paper-card style="flex:1;margin:2.5%;margin-left:0;display: flex;flex-direction: row;">
-      <div style="flex:1;background:#AB47BC;border:solid 1px #AB47BC;padding:2%;text-align:center;color:white">
+    <paper-card style="margin-left:0;">
+      <div class="titleCard" style="background:#AB47BC;">
         Web
       </div>
-      <div style="flex:3;padding:5%;">
-        <iron-icon  *ngFor="let tech of this.techno.web" [src]="tech" item-icon style="margin:3px;"></iron-icon>
+      <div class="contentCardTechno">
+        <img *ngFor="let tech of this.techno.web" [src]="tech" class="iconImg">
       </div>
     </paper-card>
 
 
-    <paper-card style="flex:1;margin:2.5%;margin-right:0;display: flex;flex-direction: row;">
-      <div style="flex:1;background:#FF7043;border:solid 1px #FF7043;padding:2%;text-align:center;color:white">
+    <paper-card style="margin-right:0;">
+      <div class="titleCard" style="background:#FF7043;">
         Os
       </div>
-      <div style="flex:3;padding:5%;">
-        <iron-icon  *ngFor="let tech of this.techno.os" [src]="tech" item-icon></iron-icon>
+      <div class="contentCardTechno">
+        <img *ngFor="let tech of this.techno.os" [src]="tech" class="iconImg">
       </div>
     </paper-card>
   </div>
 
-  <div style="display: flex;flex-direction: row;">
+  <div class="duetTechno">
 
-   <paper-card style="flex:1;margin:2.5%;margin-left:0;display: flex;flex-direction: row;">
-      <div style="flex:1;background:#43a047;border:solid 1px #43a047;padding:2%;text-align:center;color:white">
+    <paper-card style="margin-left:0;">
+      <div class="titleCard" style="background:#43a047;">
         Mobile
       </div>
-      <div style="flex:3;padding:5%;">
-      <iron-icon src="assets/svg/android.svg" item-icon></iron-icon>
-      <iron-icon src="assets/svg/ionic.svg" style="width:64px;" item-icon> </iron-icon>
-      <iron-icon src="assets/svg/cordova.png" style="width:64px;" item-icon> </iron-icon>
-    </div>
-  </paper-card>
+      <div class="contentCardTechno">
+        <img *ngFor="let tech of this.techno.mobile" [src]="tech" class="iconImg">
+      </div>
+    </paper-card>
 
-  <paper-card style="flex:1;margin:2.5%;margin-right:0;display: flex;flex-direction: row;">
-      <div style="flex:1;background:#ffc200;border:solid 1px #ffc200;padding:2%;text-align:center;color:white">
+    <paper-card style="margin-right:0;">
+      <div class="titleCard" style="background:#ffc200;">
         Autre
       </div>
-      <div style="flex:3;padding:5%;">
+      <div class="contentCardTechno">
+        <img *ngFor="let tech of this.techno.other" [src]="tech" class="iconImg">
       </div>
-  </paper-card>
+    </paper-card>
 
   </div>
 

@@ -27,6 +27,16 @@ export class TechnoComponent implements OnInit {
       'assets/svg/windows.svg',
       'assets/svg/apple.svg'
     ];
+
+    this.techno.mobile = [
+      'assets/svg/android.svg',
+      'assets/svg/ionic.svg',
+      'assets/svg/cordova.png'
+    ];
+
+    this.techno.other = [
+      'assets/svg/c.svg','assets/svg/cpp.svg','assets/svg/java.svg','assets/svg/logstash.png','assets/svg/kibana.svg','assets/svg/elasticsearch.png'
+    ];
   }
 
   ngOnInit() {

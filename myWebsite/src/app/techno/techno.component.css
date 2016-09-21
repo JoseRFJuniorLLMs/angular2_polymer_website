@@ -1,6 +1,61 @@
-    h2
-    {
-        font-family: 'Roboto', 'Noto', sans-serif;
-        -webkit-font-smoothing: antialiased;
-        font-weight: lighter;
-    }
+h2
+{
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: lighter;
+}
+
+.titleCard{
+    flex:1;
+    padding:2%;
+    text-align:center;
+    color:white
+}
+
+.iconImg{
+    height: 24px;
+    margin: 2px;
+}
+
+.contentCardTechno
+{
+    flex:3;
+    padding:5%;
+}
+
+.duetTechno{
+    display: flex;
+}
+
+.duetTechno paper-card{
+    flex:1;
+    margin:2.5%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+@media (max-width: 600px) {
+
+
+  .duetTechno {
+    flex-direction: column;
+  }
+
+  .duetTechno paper-card{
+      margin:0;
+      margin-bottom: 2.5%;
+      margin-top: 2.5%;
+  }
+
+
+}
+
+@media (min-width: 600px) {
+
+  .duetTechno {
+    flex-direction: row;
+  }
+
+}

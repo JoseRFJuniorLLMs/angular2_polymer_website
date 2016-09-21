@@ -43,6 +43,7 @@ import { ExperienceProComponent } from './cv/experience-pro/experience-pro.compo
   ],
   imports: [
     BrowserModule,
+    ChartsModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES)
