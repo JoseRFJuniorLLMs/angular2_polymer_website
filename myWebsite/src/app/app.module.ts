@@ -6,6 +6,7 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
 import { RouterModule } from '@angular/router'; 
 import { ROUTES } from './app.routes';
 import {ChartsModule} from 'ng2-charts/ng2-charts';
+import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { CvComponent } from './cv/cv.component';
@@ -16,6 +17,15 @@ import { LabComponent } from './lab/lab.component';
 import { LinkComponent } from './link/link.component';
 import { LogstashComponent } from './logstash/logstash.component';
 import { ExperienceProComponent } from './cv/experience-pro/experience-pro.component';
+
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyDeIRAHk_Sm1fl24oHUDuF-Agwgh9l6M6M",
+    authDomain: "profesionnalwebsite.firebaseapp.com",
+    databaseURL: "https://profesionnalwebsite.firebaseio.com",
+    storageBucket: "profesionnalwebsite.appspot.com",
+    messagingSenderId: "381098495791"
+  };
 
 @NgModule({
   declarations: [
@@ -46,6 +56,7 @@ import { ExperienceProComponent } from './cv/experience-pro/experience-pro.compo
     ChartsModule,
     FormsModule,
     HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],

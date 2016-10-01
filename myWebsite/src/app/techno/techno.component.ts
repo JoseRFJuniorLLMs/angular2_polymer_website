@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-techno',
@@ -8,19 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class TechnoComponent implements OnInit {
 
   techno: any = {}
+  technoWeb: FirebaseListObservable<any[]>;
+  technoOs: FirebaseListObservable<any[]>;
 
-  constructor() {
-    this.techno.web = [
-      'assets/svg/angular2.svg',
-      'assets/svg/html5.svg',
-      'assets/svg/css3.svg',
-      'assets/svg/js.png',
-      'assets/svg/php.svg',
-      'assets/svg/polymer.svg',
-      'assets/svg/grunt.svg',
-      'assets/svg/yeoman.svg',
-      'assets/svg/npm.svg'
-    ];
+  constructor(af: AngularFire) {
+    this.technoWeb = af.database.list('technos/web');
+    this.technoOs = af.database.list('technos/os');
 
     this.techno.os = [
       'assets/svg/linux.svg',
