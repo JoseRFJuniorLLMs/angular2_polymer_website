@@ -53,11 +53,21 @@ h3
         margin-left: 0;
         margin-right: 0;
     }
+
+    .cvContent{
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @media (min-width: 600px) {
     .langues{
         flex-direction: row;
+    }
+
+    .cvContent{
+        width: 80%;
+        margin-left: 10%;
     }
 }
 

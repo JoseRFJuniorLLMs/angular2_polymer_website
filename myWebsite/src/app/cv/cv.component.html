@@ -1,5 +1,8 @@
-<div style="width:80%;margin-left:10%">
-    <h1 class='title'>CHAPELLE Quentin - Curriculum vitae</h1>
+<div class="cvContent">
+
+    <h1 class='title'>CHAPELLE Quentin - Curriculum vitae     <a style="float:right" href="https://firebasestorage.googleapis.com/v0/b/profesionnalwebsite.appspot.com/o/CV_CHAPELLE_QUENTIN_102016.pdf?alt=media&token=0c74e8d2-4575-4ef5-9482-3948b20aded7">
+    <img src="assets/svg/pdf.svg"></a>
+</h1>
 
    <!-- <base-chart
       class="chart"
@@ -14,21 +17,22 @@
     </paper-card>-->
 
 
+
     <app-techno></app-techno>
 
     <div style="margin-top:5%">
 
         <h2>Expériences profesionnelles</h2>
 
-        <span *ngFor="let job of expPro"> 
+    <span *ngFor="let job of jobs | async"> 
         <app-experience-pro 
             [entreprise]="job.entreprise" 
-            [begin]="job.begin" 
-            [end]="job.end" 
-            [jobName]="job.jobName" 
+            [begin]="job.debut" 
+            [end]="job.fin" 
+            [jobName]="job.titre" 
             [description]="job.description" 
             [technos]="job.technos" 
-            [challenge]="job.challenge" 
+            [challenge]="job.challenges" 
             [color]="job.color" 
             [city]="job.city">
         </app-experience-pro>
@@ -55,17 +59,17 @@
 
         <h2>Formation</h2>
 
-        <span *ngFor="let job of formations"> 
+        <span *ngFor="let for of formations | async"> 
         <app-experience-pro 
-            [entreprise]="job.entreprise" 
-            [begin]="job.begin" 
-            [end]="job.end" 
-            [jobName]="job.jobName" 
-            [description]="job.description" 
-            [technos]="job.technos" 
-            [challenge]="job.challenge" 
-            [color]="job.color" 
-            [city]="job.city">
+            [entreprise]="for.ecole" 
+            [begin]="for.debut" 
+            [end]="for.fin" 
+            [jobName]="for.titre" 
+            [description]="for.description" 
+            [technos]="for.technos" 
+            [challenge]="for.challenge" 
+            [color]="for.color" 
+            [city]="for.city">
         </app-experience-pro>
       </span>
 

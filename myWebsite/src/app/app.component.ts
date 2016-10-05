@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router, Event, NavigationEnd} from '@angular/router';
+declare var ga:Function;
 
 @Component({
   selector: 'app-root',
@@ -9,21 +10,17 @@ import {Router, Event, NavigationEnd} from '@angular/router';
 export class AppComponent {
 
   leftMenu: boolean;
+  public currentRoute: string = '';
 
   constructor(public router:Router) {
-        this.router.events.subscribe(
-            (event:Event) => {
-                if (event instanceof NavigationEnd) {
-                  console.log("change page: "+ event.urlAfterRedirects,(<any>window).dataLayer);
-                    (<any>window).dataLayer.push({
-                        event: 'pageView',
-                        action: event.urlAfterRedirects,
-                });
-
-                console.log((<any>window).dataLayer)
-
-                }
-            });
+    router.events.subscribe((route) => {
+      var newRoute = route.url || '/';
+      console.log(newRoute);
+      if(newRoute !== this.currentRoute) {
+        ga('send', 'pageview', newRoute);
+        this.currentRoute = newRoute;
+      }
+    });
             this.leftMenu = false; 
           }
 

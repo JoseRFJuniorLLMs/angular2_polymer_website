@@ -1,29 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
-
-class Job {
-  public entreprise: string;
-  public begin: string;
-  public end: string;
-  public jobName: string;
-  public description: string;
-  public challenge: any[];
-  public technos: any[];
-  public color: string;
-  public city: string;
-
-  constructor(entreprise, begin, end, jobName, description, challenge, technos, color, city) {
-    this.entreprise = entreprise;
-    this.begin = begin;
-    this.end = end;
-    this.jobName = jobName;
-    this.description = description;
-    this.color = color;
-    this.city = city;
-    this.challenge = challenge;
-    this.technos = technos;
-  }
-}
 
 @Component({
   selector: 'app-cv',
@@ -32,9 +9,11 @@ class Job {
   
 })
 export class CvComponent implements OnInit {
+   
 
   expPro: any[] = [];
-  formations: any[] = [];
+  jobs: FirebaseListObservable<any[]>;
+  formations: FirebaseListObservable<any[]>;
 
   private datasets = [
     {
@@ -57,9 +36,13 @@ export class CvComponent implements OnInit {
 
 
 
-  constructor() {
+  constructor(af: AngularFire) {
 
-    this.expPro.push(new Job(
+    this.jobs = af.database.list('jobs');
+    this.formations = af.database.list('formations');
+
+    /* 
+      this.expPro.push(new Job(
       "MICHELIN",
       "De mars 2016",
       "à maintenant",
@@ -77,14 +60,12 @@ export class CvComponent implements OnInit {
     this.expPro.push(new Job("MICHELIN", "De sept. 2013", "à sept. 2014", "Alternant", "Etude et mise en place d’outils de monitoring et de troubleshooting", [], ['assets/svg/logstash.png','assets/svg/kibana.svg','assets/svg/elasticsearch.png'], "#5C6BC0", "Clermont-Ferrand"));
 
 
-/* 
-Compétences: spring, jersey, maven, hibernate, mockito, talend, JEE, shell, jenkins, etc. */
+
+Compétences:   maven, mockito, talend, JEE, shell 
 
     this.expPro.push(new Job("WORLDLINE", "De avr. 2013", "à sept. 2013", "Développeur stagiaire", "Conception, développement, maintenance et déploiement d'applications Web JEE. Stage effectué dans le cadre du programme pédagogique de deuxième année de l'ISIMA.", ['Intégration aux équipes de Worldline',"Conception et développement d'évolutions",'Maintenance des services en place',"Prise en main des outils et des méthodes d'intégration continue et de gestion de projet","Contact client","Formation technique "], [], "#5C6BC0", "Lyon"));
 
-/*
- Qt, UML, etc.
- */
+ 
     this.expPro.push(new Job("CHU", "De avr. 2010", "à juin 2010", "Développeur stagiaire", "Création d’un logiciel de paramétrage et d’automatisation d’un laser médicale.", [], ['assets/svg/cpp.svg'], "#5C6BC0", "Clermont-Ferrand"));
 
     this.formations.push(new Job("ISIMA", "De sept. 2011", "à sept. 2014", "Ecole d'ingénieur", "", [], [], "#43A047", "Clermont-Ferrand"));
@@ -92,7 +73,8 @@ Compétences: spring, jersey, maven, hibernate, mockito, talend, JEE, shell, jen
     this.formations.push(new Job("Lycée Lafayette", "De sept. 2010", "à sept. 2011", "Classe préparatoire aux grandes écoles ( CPGE ATS )", "", [], [], "#43A047", "Clermont-Ferrand"));
 
     this.formations.push(new Job("IUT", "De sept. 2011", "à sept. 2014", "Institut Universitaire de Technologie", "", [], [], "#43A047", "Aubiére"));
-  }
+*/  
+}
 
   ngOnInit() {
   }

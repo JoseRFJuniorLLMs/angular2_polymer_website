@@ -74,10 +74,10 @@
 footer{
     font-family: 'Roboto', 'Noto', sans-serif;
     -webkit-font-smoothing: antialiased;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 50px;
+    background-color: #dedede;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
     text-align: center;
     vertical-align: middle;
 }
@@ -97,6 +97,13 @@ footer .imgDiv{
 }
 
 @media (max-width: 600px) {
+
+.contentFlex{
+    width:100%;
+    display:flex; 
+    flex-direction: column;
+    min-height: calc(100vh - 224px);
+}
 
 .fonction
 {
@@ -123,6 +130,13 @@ footer .imgDiv{
 }
 
 @media (min-width: 600px) {
+
+.contentFlex{
+    width:100%;
+    display:flex; 
+    flex-direction: column;
+    min-height: calc(100vh - 256px);
+}
 
 .profilPicture{
     display: initial;

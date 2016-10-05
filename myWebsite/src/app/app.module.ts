@@ -17,6 +17,7 @@ import { LabComponent } from './lab/lab.component';
 import { LinkComponent } from './link/link.component';
 import { LogstashComponent } from './logstash/logstash.component';
 import { ExperienceProComponent } from './cv/experience-pro/experience-pro.component';
+import { FlexboxgeneratorComponent } from './lab/flexboxgenerator/flexboxgenerator.component';
 
 
 export const firebaseConfig = {
@@ -49,7 +50,8 @@ export const firebaseConfig = {
     LabComponent,
     LinkComponent,
     LogstashComponent,
-    ExperienceProComponent
+    ExperienceProComponent,
+    FlexboxgeneratorComponent
   ],
   imports: [
     BrowserModule,

@@ -2,33 +2,11 @@
   <div class="card-content">
 
     <div role="listbox">
-      <paper-icon-item (click)="goToWebsite('http://quentinchapelle.fr')">
-        <iron-icon src="assets/svg/ic_public_black_24px.svg" item-icon></iron-icon>
-        quentinchapelle.fr
-      </paper-icon-item>
-      <paper-icon-item (click)="goToWebsite('https://twitter.com/quentinchap')">
-        <iron-icon src="assets/svg/twitter.svg" item-icon></iron-icon>
-        twitter.com/quentinchap
-      </paper-icon-item>
-      <paper-icon-item (click)="goToWebsite('https://fr.linkedin.com/in/quentinchapelle')">
-        <iron-icon src="assets/svg/linkedin.svg" item-icon></iron-icon>
-        fr.linkedin.com/in/quentinchapelle
-      </paper-icon-item>
-      <paper-icon-item (click)="goToWebsite('https://www.viadeo.com/fr/profile/qchapelle')">
-        <iron-icon src="assets/svg/viadeo.svg" item-icon></iron-icon>
-        www.viadeo.com/fr/profile/qchapelle
-      </paper-icon-item>
-      <paper-icon-item (click)="goToWebsite('https://github.com/quentinchap')">
-        <iron-icon src="assets/svg/github.svg" item-icon></iron-icon>
-        github.com/quentinchap
-      </paper-icon-item>
 
-      <paper-icon-item (click)="goToWebsite('http://stackoverflow.com/users/5798589/qchap?tab=profile')">
-        <iron-icon src="assets/svg/stackoverflow.svg" item-icon></iron-icon>
-        qchap
+      <paper-icon-item *ngFor="let link of links | async" (click)="goToWebsite(link.url)" > 
+        <iron-icon [src]="link.img" item-icon></iron-icon> 
+        {{link.label}}
       </paper-icon-item>
-
-
     </div>
   </div>
 </paper-card>

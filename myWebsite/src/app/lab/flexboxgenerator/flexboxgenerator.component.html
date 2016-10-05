@@ -1,0 +1,22 @@
+
+<paper-card >
+    <div class="card-content">
+      Premiére version de test 'drag & drop'. Le drop ne fonctionne pas et il y a quelques problémes de positionnement.<br>
+      Vous pouvez retrouver le code de ce composant sur github: 
+    </div>
+  </paper-card>
+
+<div class="flexParent" (mousemove)="moveMouse($event)" #test>
+  <paper-card 
+  class="flexboxtest" 
+  *ngFor="let mess of cardsText; let i = index" 
+  [style.order]="mess.order" 
+  (style.width)="mess.width"
+  (mousedown)="lockElement($event,mess)" 
+  (mouseup)="releaseClick($event,mess)" 
+    [heading]="'Card '+mess.order">
+    <div class="card-content">
+      {{mess.width}} {{mess.text}} 
+    </div>
+  </paper-card>
+</div>

@@ -1,0 +1,11 @@
+.flexboxtest{
+    margin: 1vw;
+    width: 23vw;
+    flex-grow: 1;
+}
+
+.flexParent{
+    display:flex; 
+    flex-wrap: wrap; 
+
+}

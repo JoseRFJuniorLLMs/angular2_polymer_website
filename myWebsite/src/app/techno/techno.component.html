@@ -7,13 +7,14 @@
 
 
     <paper-card style="margin-left:0;">
-      <div class="titleCard" style="background:#AB47BC;">
-        Web
+      <div class="titleCard" style="background:#43a047;">
+        Mobile
       </div>
       <div class="contentCardTechno">
-        <img *ngFor="let tech of this.technoWeb | async" [src]="tech.$value" class="iconImg">
+        <img *ngFor="let tech of this.technoMobile | async" [src]="tech.$value" class="iconImg">
       </div>
     </paper-card>
+ 
 
 
     <paper-card style="margin-right:0;">
@@ -28,21 +29,22 @@
 
   <div class="duetTechno">
 
-    <paper-card style="margin-left:0;">
-      <div class="titleCard" style="background:#43a047;">
-        Mobile
+   <paper-card style="margin-left:0;">
+      <div class="titleCard" style="background:#AB47BC;">
+        Web
       </div>
       <div class="contentCardTechno">
-        <img *ngFor="let tech of this.techno.mobile" [src]="tech" class="iconImg">
+        <img *ngFor="let tech of this.technoWeb | async" [src]="tech.$value" class="iconImg">
       </div>
     </paper-card>
+
 
     <paper-card style="margin-right:0;">
       <div class="titleCard" style="background:#ffc200;">
         Autre
       </div>
       <div class="contentCardTechno">
-        <img *ngFor="let tech of this.techno.other" [src]="tech" class="iconImg">
+        <img *ngFor="let tech of this.technoOther | async" [src]="tech.$value" class="iconImg">
       </div>
     </paper-card>
 

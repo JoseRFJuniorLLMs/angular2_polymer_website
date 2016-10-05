@@ -1,8 +1,8 @@
-<paper-header-panel mode="waterfall-tall">
+<paper-header-panel mode="waterfall-tall" >
   <paper-toolbar>
     <div class="title">CHAPELLE Quentin</div>
     <div class="bottom subhead fonction">Anaylste developpeur fullstack</div>
-    <div class="profilPicture"> <img src="http://quentinchapelle.fr/images/photoProfil.jpg"> </div>
+    <div class="profilPicture"> <img src="https://firebasestorage.googleapis.com/v0/b/profesionnalwebsite.appspot.com/o/photoProfil.jpg?alt=media&token=fe687831-7ae6-4b16-a267-3a83d82ffc47"> </div>
   </paper-toolbar>
 
 
@@ -11,14 +11,24 @@
     <app-menu class="menuHeader" (closeMenu)="toggleLeft()"></app-menu>
   </paper-toolbar>
 
-  <div style="width:100%;">
+  <div class="contentFlex" >
+    <div style="flex: 1 1 auto;">
 
-    <router-outlet> </router-outlet>
-
-    <footer>
+    <router-outlet>  </router-outlet>
+    </div>
+    <footer style="margin-top:50px;">
       This website use<br>
       <div class="imgDiv">
-        <img src="assets/svg/polymer.svg"><img src="assets/svg/angular2.svg">
+        
+        <a href="https://www.polymer-project.org/1.0/" style="text-decoration: none;">
+          <img src="https://firebasestorage.googleapis.com/v0/b/profesionnalwebsite.appspot.com/o/polymer.svg?alt=media&token=54129c9c-22f8-4d1f-8cdc-b541290b390d">
+        </a>
+        <a href="https://angular.io/" style="text-decoration: none;">
+        <img src="https://firebasestorage.googleapis.com/v0/b/profesionnalwebsite.appspot.com/o/angular2.svg?alt=media&token=b50c21d4-55e8-4186-84f8-0c588b6d3763">
+        </a>
+        <a href="https://firebase.google.com/" style="text-decoration: none;">
+        <img src="https://firebasestorage.googleapis.com/v0/b/profesionnalwebsite.appspot.com/o/firebase_28dp.png?alt=media&token=9b0bdbfb-c4e4-45d6-9cbf-fcb526e3249e">     
+        </a>
       </div>
     </footer>
   </div>
