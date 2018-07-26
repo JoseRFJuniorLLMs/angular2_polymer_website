@@ -1,0 +1,17 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "myWebsite/package.json",
+        "myWebsite/public/bower_components/chart.js/package.json",
+        "myWebsite/public/bower_components/promise-polyfill/package.json",
+        "myWebsite/public/bower_components/vaadin-combo-box/package.json",
+        "myWebsite/public/bower_components/webcomponentsjs/package.json",
+        "myWebsite/src/bower_components/chart.js/package.json",
+        "myWebsite/src/bower_components/promise-polyfill/package.json",
+        "myWebsite/src/bower_components/vaadin-combo-box/package.json",
+        "myWebsite/src/bower_components/webcomponentsjs/package.json"
+      ]
+    }
+  }
+}
